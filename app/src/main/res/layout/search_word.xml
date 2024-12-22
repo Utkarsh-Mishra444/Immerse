@@ -1,0 +1,97 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Top Bar -->
+
+    <!-- Search Bar -->
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="48dp"
+        android:autofillHints=""
+        android:background="@drawable/search_bar_background"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <EditText
+            android:id="@+id/searchBar"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/search_for_words"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:textColor="@android:color/black"
+            tools:ignore="VisualLintTextFieldSize" />
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="54dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_search" />
+
+    </LinearLayout>
+
+    <!-- Search Results List -->
+    <ListView
+        android:id="@+id/searchResultsList"
+        android:layout_width="391dp"
+        android:layout_height="592dp"
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <!-- Three Dot Menu Button -->
+
+        <!-- Dropdown Menu (hidden by default) -->
+        <LinearLayout
+            android:id="@+id/dropdownMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/linkManager"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="@string/link_manager" />
+
+            <TextView
+                android:id="@+id/futureOption1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="@string/future_option_1" />
+
+            <TextView
+                android:id="@+id/futureOption2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="@string/future_option_2" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

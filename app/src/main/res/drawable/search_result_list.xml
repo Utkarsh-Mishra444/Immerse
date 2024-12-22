@@ -1,0 +1,5 @@
+<!-- res/layout/search_results_list.xml -->
+<ListView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/searchResultsList"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"/>
